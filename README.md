@@ -2,6 +2,10 @@
 
 A lightweight, customizable chat widget that can be embedded into any website. The widget provides a modern, responsive interface with features like minimization, resizing, and chat history persistence.
 
+[![](https://data.jsdelivr.com/v1/package/gh/yourusername/chat-widget/badge)](https://www.jsdelivr.com/package/gh/yourusername/chat-widget)
+
+> 📝 Note: Replace `yourusername` in the CDN URLs with your actual GitHub username after forking/publishing the repository.
+
 ## Features
 
 - 🎯 Easy to embed
@@ -15,8 +19,19 @@ A lightweight, customizable chat widget that can be embedded into any website. T
 ## Installation
 
 ### Using CDN
+You can load the widget directly from GitHub using jsdelivr:
+
 ```html
-<script src="https://your-cdn.com/chat-widget.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/yourusername/chat-widget@main/dist/chat-widget.js"></script>
+```
+
+Note: Replace `yourusername` with your GitHub username. You can also specify a specific version:
+```html
+<!-- Load a specific version -->
+<script src="https://cdn.jsdelivr.net/gh/yourusername/chat-widget@v1.0.0/dist/chat-widget.js"></script>
+
+<!-- Load the latest version from the main branch -->
+<script src="https://cdn.jsdelivr.net/gh/yourusername/chat-widget@main/dist/chat-widget.js"></script>
 ```
 
 ### Self-hosted
@@ -116,7 +131,10 @@ You can test the widget on any live website using browser developer tools:
 ```javascript
 // First, load the widget script
 const script = document.createElement('script');
-script.src = 'http://localhost:8080/chat-widget.js'; // Or your hosted widget URL
+// For development
+script.src = 'http://localhost:8080/chat-widget.js';
+// For production
+// script.src = 'https://cdn.jsdelivr.net/gh/yourusername/chat-widget@main/dist/chat-widget.js';
 document.body.appendChild(script);
 
 // Wait for script to load, then initialize
